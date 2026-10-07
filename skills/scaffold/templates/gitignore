@@ -1,0 +1,10 @@
+# Build output and dependencies
+node_modules/
+dist/
+target/
+
+# Local settings
+.claude/settings.local.json
+.idea/
+.vscode/
+*.log
