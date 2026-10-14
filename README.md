@@ -8,22 +8,20 @@ spent on features, not setup.
 
 | Skill | What it does |
 |---|---|
-| `/scaffold backend` | A Spring Boot REST API: health endpoint, Swagger UI, consistent JSON errors, tests, Claude harness. Committed and verified. |
-| `/scaffold` | The same backend plus a React + TypeScript frontend (Vite, Tailwind, Vitest) wired through a dev proxy. |
+| `/scaffold` | A Spring Boot REST API: health endpoint, Swagger UI, consistent JSON errors, tests, Claude harness. Committed and verified. |
 
 Each scaffolded project gets its own harness:
 
 | File | Purpose |
 |---|---|
 | `CLAUDE.md` | Stack, commands, working rules, and known traps (Spring Boot 4 test imports, H2, PATCH validation, ...) |
-| `.claude/settings.json` | Pre-approved Maven, npm and git commands; destructive commands denied |
+| `.claude/settings.json` | Pre-approved Maven and git commands; destructive commands denied |
 | `.claude/skills/spec` | `/spec`: turns the brief into `SPEC.md` (deliverables checklist, must-haves, endpoints, data model, build order, demo script) |
 | `.claude/skills/verify` | `/verify`: runs the tests and exercises the feature on the running app before a commit |
 
 ## Requirements
 
-Windows with PowerShell 7, Git, Java 17+ (21 or 25 recommended), Claude Code. Node 20+ only for the
-full-stack mode. Internet access to start.spring.io and Maven Central.
+Windows with PowerShell 7, Git, Java 17+ (21 or 25 recommended), Claude Code. Internet access to start.spring.io and Maven Central.
 
 ## Install
 
@@ -51,8 +49,10 @@ claude
 Then in Claude Code:
 
 ```text
-/scaffold backend
+/scaffold
 ```
+
+Type it with the slash: without it, Claude does its own scaffolding instead of running the skill.
 
 It takes about 2 minutes once Maven has its dependencies cached (5-10 minutes on a first run). When it
 reports success:
@@ -62,7 +62,7 @@ reports success:
 3. Run `/verify`, then commit. Repeat.
 4. Demo through Swagger UI at http://localhost:8080/swagger-ui.html.
 
-## What `/scaffold backend` creates
+## What `/scaffold` creates
 
 ```text
 my-app/

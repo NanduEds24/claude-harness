@@ -2,15 +2,12 @@
   "permissions": {
     "allow": [
       "PowerShell(.\\mvnw.cmd *)",
-      "PowerShell(npm *)",
-      "PowerShell(npx vitest *)",
       "PowerShell(git status*)",
       "PowerShell(git diff*)",
       "PowerShell(git log*)",
       "PowerShell(git add *)",
       "PowerShell(git commit *)",
       "PowerShell(git switch *)",
-      "Bash(npm *)",
       "Bash(git status*)",
       "Bash(git diff*)",
       "Bash(git log*)",
