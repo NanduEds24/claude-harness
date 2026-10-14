@@ -6,10 +6,13 @@ description: Turn a brief into SPEC.md for a REST API, with a ranked feature lis
 1. Read the brief. Ask at most 3 questions, only where the answer changes what gets built.
 2. Write SPEC.md with:
    - Goal: one sentence, the user and the problem.
+   - Deliverables: a checklist of everything the brief asks to be handed in or followed (README,
+     video, commit style, branches and PRs, versions, submission format, deadline), quoting the
+     brief's own words. Every item here is required.
    - Must-haves: 3 to 5 features, each with a one-line "done when", including what happens on
      invalid input, missing items and conflicts.
    - Nice-to-haves: ranked, each small (for example filtering, pagination, sorting, search).
-   - Out of scope: what we deliberately won't build.
+   - Out of scope: what we deliberately won't build. Never list anything the brief asks for here.
    - Data model: each entity with its fields, types, constraints and relationships.
    - Endpoints: a table of method, path, request body, success status, error statuses.
    - Business rules: the checks the service layer must enforce.

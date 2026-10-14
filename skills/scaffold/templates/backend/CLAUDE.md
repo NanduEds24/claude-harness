@@ -5,6 +5,15 @@ and Swagger UI is the demo. Scope lives in SPEC.md; read it before starting any 
 by /spec when the brief arrives).
 The team is new to Java: after each change, explain what you did in 3 lines or fewer.
 
+## The brief is the marking scheme
+- Every deliverable the brief names is in scope: README, video or walkthrough, commit style, branch
+  and PR rules, versions, submission format. Never mark one out of scope or swap it for something else.
+- Where the brief gives instructions (git workflow, versions, structure), they override this file.
+- Stay inside the brief. No extras it didn't ask for (CI, linters, coverage, Docker, security,
+  caching) until every must-have and deliverable is done, and then only after asking.
+- The human must be able to explain every line. Keep changes small enough to read, and point out
+  anything non-obvious. If they can't explain it, simplify it.
+
 ## Stack
 - Spring Boot <BOOT>, Java <JAVA>, Maven wrapper, Spring Web MVC + Data JPA + H2 (in-memory) +
   Validation + DevTools + springdoc-openapi (Swagger UI). The Maven project is at the repository root.
@@ -30,7 +39,10 @@ The team is new to Java: after each change, explain what you did in 3 lines or f
   409 for conflicts.
 - After each feature: run the tests, call the endpoints on the running app, then commit.
 - Simplest thing that works. No new dependencies without asking.
-- Work on main. One-line commit messages. After committing, show `git log --oneline -1` as proof.
+- Work on main unless the brief says otherwise. Commit as you go: one small commit per working step,
+  with an imperative one-line message that says what changed. Never save up work for one big commit,
+  and never split finished code into several commits at the end; the history should show the build.
+  After committing, show `git log --oneline -1` as proof.
 - If something fails twice, stop and explain instead of trying a third approach.
 - Match the existing code style. Don't run formatters or tools that aren't installed in the project.
 

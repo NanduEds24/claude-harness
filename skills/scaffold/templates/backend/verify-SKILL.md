@@ -11,5 +11,8 @@ description: Check that the current API feature really works. Use after finishin
    http://localhost:8080/api/...): the happy path, one invalid request and one missing id. Check the
    status codes and that error bodies have `status`, `title` and `detail`.
 4. Confirm the endpoints appear in http://localhost:8080/v3/api-docs (what Swagger UI shows).
-5. Report what you checked and what you saw in 3 lines or fewer. Say plainly if anything failed or
+5. Check the commits since the last verify: small steps with messages that say what changed, nothing
+   outside SPEC.md. When this is the last feature, go through the Deliverables checklist in SPEC.md
+   and list any item not yet done.
+6. Report what you checked and what you saw in 3 lines or fewer. Say plainly if anything failed or
    could not be checked.

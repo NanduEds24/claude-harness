@@ -17,7 +17,7 @@ Each scaffolded project gets its own harness:
 |---|---|
 | `CLAUDE.md` | Stack, commands, working rules, and known traps (Spring Boot 4 test imports, H2, PATCH validation, ...) |
 | `.claude/settings.json` | Pre-approved Maven, npm and git commands; destructive commands denied |
-| `.claude/skills/spec` | `/spec`: turns the brief into `SPEC.md` (must-haves, endpoints, data model, build order, demo script) |
+| `.claude/skills/spec` | `/spec`: turns the brief into `SPEC.md` (deliverables checklist, must-haves, endpoints, data model, build order, demo script) |
 | `.claude/skills/verify` | `/verify`: runs the tests and exercises the feature on the running app before a commit |
 
 ## Requirements
